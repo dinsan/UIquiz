@@ -1,0 +1,10 @@
+
+
+       <input #choiceBar matInput  [(ngModel)]='choiceValue' name='choiceBar' [value]='choiceValue' (keyup.enter)='performchoice($event)'>
+
+       <button mat-raised-button color="primary" (click)='addPossibleChoice(choiceBar.value)' id='submit-choice' type='button' for='choiceBar' class="btn btn-outline-success btn-sm">+</button>
+       <ul class="list-group">
+           <li *ngFor="let item of possibleChoice" class="list-group-item list-group-item-action list-group-item-success">
+                {{item}} 
+            </li>
+       </ul>

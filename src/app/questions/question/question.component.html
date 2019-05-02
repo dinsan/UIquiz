@@ -1,0 +1,15 @@
+<form (ngSubmit)="onSubmit(form)" #form="ngForm">
+ 
+  <div class="form-group">
+    <input type="hidden" name="id" #id="ngModel"  [(ngModel)]="service.fromdta.id">
+    <label for="name">Question</label>
+    <input type="text" class="form-control" name="question" #question="ngModel"  [(ngModel)]="service.fromdta.question">
+  </div>
+
+  <br>
+   <h6><span class="badge badge-secondary"> 2</span> Add Possible answers</h6>
+  <app-possible-choice-list></app-possible-choice-list>
+  <br>
+  <h6><span class="badge badge-secondary"> 3</span> Save</h6>
+  <button type="submit" class="btn btn-success">Submit</button>
+</form>
